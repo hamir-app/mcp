@@ -1,0 +1,32 @@
+{
+  "name": "hamir-mcp",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Optimize your hamir library with seamless MCP integration.",
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc",
+    "test": "node --test \"test/**/*.test.ts\"",
+    "sync-manifest": "node scripts/sync-manifest.ts",
+    "validate": "mcpb validate manifest.json",
+    "pack": "node scripts/pack.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0"
+  },
+  "devDependencies": {
+    "@anthropic-ai/mcpb": "^2.1.2",
+    "@types/node": "^24.0.0",
+    "typescript": "^7.0.2"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hamir-app/mcp"
+  },
+  "homepage": "https://hamir.app"
+}
